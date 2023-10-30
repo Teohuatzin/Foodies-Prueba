@@ -1,0 +1,158 @@
+body {
+	background: linear-gradient(to bottom, #4976e7, #43b8ea);
+	text-align: center;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.Info {
+	display: flex;
+	justify-content: center;
+	width: 60%; /* Ocupan el 60% del ancho de la pantalla */
+	margin: 0 auto; /* Los centra horizontalmente */
+}
+
+.Info a {
+	list-style-type: none;
+	border: 2px solid rgb(0, 70, 128);
+	margin: 25px 2%; /* Espacio entre los enlaces y margen derecho/izquierdo */
+	display: inline;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 10px 20px; /* Ajusta el padding */
+	text-decoration: none;
+	background-color: rgb(16, 170, 236);
+	border-radius: 10px;
+	font-size: .7rem;
+	width: 60%; /* Cada enlace ocupa el 20% del ancho total */
+	box-sizing: border-box; /* Incluye el padding en el ancho total */
+	white-space: nowrap; /* Evita que el texto se desborde */
+	text-overflow: ellipsis; /* Agrega puntos suspensivos a texto que se desborda */
+}
+
+.Info a:hover {
+	background-color: #349660;
+	color: black;
+}
+
+.Logo {
+	display: flex;
+	justify-content: center;
+}
+
+.Logo img {
+	width: 20%;
+	margin: 2% 2%;
+	align-items: center;
+	justify-content: center;
+}
+
+.Requisitos-container {
+	max-width: 60%;
+	margin: 0 auto;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	background-color: aqua;
+	color: #be0101;
+	display: flex;
+	flex-direction: column;
+	font-size: 1em;
+}
+
+.Requisitos-list {
+	list-style-type: none;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.Requisitos-list-item {
+	margin: 2px 0;
+}
+
+.beneficios-container {
+	max-width: 60%;
+	margin: 0 auto;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	background-color: aqua;
+	color: #be0101;
+	display: flex;
+	flex-direction: column;
+	font-size: 1em;
+}
+
+.beneficios-list {
+	list-style-type: none;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.beneficios-list-item {
+	margin: 2px 0;
+}
+
+footer {
+	background-color: #4976e7;
+	color: #fff;
+	margin-top: 50px;
+	font-size: 1em; /* Tamaño de fuente relativo */
+}
+
+footer a {
+	font-size: 1em;
+}
+
+/* Estilos para títulos h1 y h6 en pantallas más grandes (mayores de 768px) */
+@media screen and (min-width: 1431px) {
+	h1 {
+		font-size: 4em;
+		/* Cambia el tamaño de fuente de h1 para pantallas grandes */
+	}
+
+	h6 {
+		font-size: 2em;
+		/* Cambia el tamaño de fuente de h6 para pantallas grandes */
+	}
+}
+
+/* Estilos para títulos h1 y h6 en pantallas medianas (entre 481px y 768px) */
+@media screen and (min-width: 771px) and (max-width: 1430px) {
+	h1 {
+		font-size: 2.5em;
+		/* Cambia el tamaño de fuente de h1 para pantallas medianas */
+	}
+
+	h6 {
+		font-size: 1em;
+		/* Cambia el tamaño de fuente de h6 para pantallas medianas */
+	}
+}
+
+/* Estilos para títulos h1 y h6 en pantallas pequeñas (menores de 480px) */
+@media screen and (min-width: 481px) and (max-width: 770px) {
+	h1 {
+		font-size: 2em;
+		/* Cambia el tamaño de fuente de h1 para pantallas pequeñas */
+	}
+
+	h6 {
+		font-size: .7em;
+		/* Cambia el tamaño de fuente de h6 para pantallas pequeñas */
+	}
+}
+
+/* Estilos para títulos h1 y h6 en pantallas pequeñas (menores de 480px) */
+@media screen and (max-width: 480px) {
+	h1 {
+		font-size: 1em;
+		/* Cambia el tamaño de fuente de h1 para pantallas pequeñas */
+	}
+
+	h6 {
+		font-size: .4em;
+		/* Cambia el tamaño de fuente de h6 para pantallas pequeñas */
+	}
+}

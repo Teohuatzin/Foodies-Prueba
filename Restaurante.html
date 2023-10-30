@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Restaurante</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Restaurante.css">
+	<script>
+		function calcularTotal() {
+			var precios = document.getElementsByClassName("precio");
+			var cantidades = document.getElementsByClassName("cantidad");
+			var total = 0;
+
+			for (var i = 0; i < precios.length; i++) {
+				var precio = parseFloat(precios[i].innerText);
+				var cantidad = parseFloat(cantidades[i].value);
+
+				if (!isNaN(cantidad)) {
+					total += precio * cantidad;
+				}
+			}
+
+			document.getElementById("total").innerText = "$" + total.toFixed(2);
+		}
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="Logo">
+			<img src="/Septiembre/Assets/Logo Conejo y Perro.jpeg" alt="Logo">
+		</div>
+		<nav class="Info">
+			<a href="#">Anunciarme</a>
+			<a href="#">Participar</a>
+		</nav>
+	</header>
+	<div class="Titulo">
+		<h1>Restaurante</h1>
+	<div class="Menu-Imagenes">
+		<a href="Restaurante.html"> <img src="/Septiembre/Assets/HolaCafe1.jpg" alt="Hola Café">
+			<div class="overlay">
+				<h2>Hola Café</h2>
+				<p>Disfruta de nuestro café recién preparado y deliciosos desayunos.</p>
+			</div>
+		</a>
+		<a href="Restaurante.html"> <img src="/Septiembre/Assets/Ensaladas.jpg" alt="Ensaladas">
+			<div class="overlay">
+				<h2>Hola Café</h2>
+				<p>Disfruta de nuestro café recién preparado y deliciosos desayunos.</p>
+			</div>
+		</a>
+		<a href="Restaurante.html"> <img src="/Septiembre/Assets/Postres.jpg" alt="Postres">
+			<div class="overlay">
+				<h2>Hola Café</h2>
+				<p>Disfruta de nuestro café recién preparado y deliciosos desayunos.</p>
+			</div>
+		</a>
+		<a href="Restaurante.html"> <img src="/Septiembre/Assets/Postres.jpg" alt="Postres">
+			<div class="overlay">
+				<h2>Hola Café</h2>
+				<p>Disfruta de nuestro café recién preparado y deliciosos desayunos.</p>
+			</div>
+		</a>
+		<a href="Restaurante.html"> <img src="/Septiembre/Assets/Postres.jpg" alt="Postres">
+			<div class="overlay">
+				<h2>Hola Café</h2>
+				<p>Disfruta de nuestro café recién preparado y deliciosos desayunos.</p>
+			</div>
+		</a>
+		<a href="Restaurante.html"> <img src="/Septiembre/Assets/Postres.jpg" alt="Postres">
+			<div class="overlay">
+				<h2>Hola Café</h2>
+				<p>Disfruta de nuestro café recién preparado y deliciosos desayunos.</p>
+			</div>
+		</a>
+	</div>
+	<div class="Informacion-General">
+		<div class="restaurante-info">
+			<h2>Nombre del Restaurante</h2>
+			<p>Domicilio: Calle Nombre, Número</p>
+			<p>Teléfono: (123) 456-7890</p>
+			<p>Horario: Lunes a Domingo, 10:00 AM - 9:00 PM</p>
+			<a href="https://maps.google.com">Ubicación en Google Maps</a>
+		</div>
+
+		<div class="mapa">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29857.906295390396!2d-103.99451712877078!3d20.700546215838656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84266d886f34c899%3A0x3d176b2789cdab97!2sAhualulco%20de%20Mercado%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1698644795984!5m2!1ses-419!2smx"
+				width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</div>
+	<div class="Menu">
+		<div class="tabla">
+			<table>
+				<tr>
+					<th>Plato</th>
+					<th>Descripción</th>
+					<th>Precio</th>
+					<th>Cantidad</th>
+				</tr>
+				<tr>
+					<td>Hot Cakes</td>
+					<td>Mermelada, miel, miel de maple, nutella, lechera.</td>
+					<td class="precio">20.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Chilaquiles</td>
+					<td>Tortilla de Maiz, salsa verde o roja, queso fresco, crema, cebolla, cilantro y pollo.</td>
+					<td class="precio">70.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Omelette</td>
+					<td>Huevos, jamon, queso, champinones, cebolla, pimiento, espinacas, tomate.</td>
+					<td class="precio">80.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Hamburguesa</td>
+					<td>Pan para hamburguesa, carne, lechuca tomate, cebolla, queso, ketchup, mostaza y mayonesa.</td>
+					<td class="precio">75.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Sandwich</td>
+					<td>Pan de tu eleccion, jamon, queso, pavo, lechuga, jitomate, cebolla, crema y mostaza.</td>
+					<td class="precio">25.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Lonches</td>
+					<td>Pan, carne, jamon aguacate, cebolla, lechuga, ketchup, mostaza.</td>
+					<td class="precio">35.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Hot Dog</td>
+					<td>Pan para hot dog, salchicha, ketchup, queso, mostaza, pepinillos, cebolla.</td>
+					<td class="precio">30.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Pizzas</td>
+					<td>Masa de pizza, salsa, queso e ingredientes a eleccion.</td>
+					<td class="precio">120.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Alitas</td>
+					<td>Alitas de pollo, salsa de barbacoa, salsa picante, miel, ajo en polvo, paprika y salsa de mantequilla con
+						ajo.</td>
+					<td class="precio">110.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Aros de cebolla</td>
+					<td>Cebolla, harina, huevo, pan rallado, sal, pimienta.</td>
+					<td class="precio">70.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+				<tr>
+					<td>Dedos de queso</td>
+					<td>Queso mozzarella, harina, huevo, pan rallado, sal y pimienta.</td>
+					<td class="precio">45.00</td>
+					<td><input type="number" class="cantidad" min="0" value="0" onchange="calcularTotal()"></td>
+				</tr>
+			</table>
+			<div class="total">Total: $<span id="total">0.00</span></div>
+		</div>
+	</div>
+
+	<Footer>
+		<div class="Redes">
+			<a href="https://www.facebook.com/"><img src="/Septiembre/Assets/Facebook.png" alt="Facebook"></a>
+			<a href="https://www.instagram.com/"><img src="/Septiembre/Assets/Instagram.png" alt="Instagram"></a>
+		</div>
+		<div class="Contacto">
+			<h1>Contacto </h1>
+			<h6>Correo: gustavo12tgs@gmail.com
+	</Footer>
+</body>
+
+</html>
